@@ -1,0 +1,72 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Deposits & Withdrawals | BlueFx Markets" description="Fund a BlueFx Markets account in Namibian Dollars with DPO Pay or a Namibian bank." page="deposits">
+<main id="content">
+    <section class="page-hero">
+      <div class="container">
+        <p class="crumb"><a href="/">Home</a> / Deposits & Withdrawals</p>
+        <h1>Money in and out, in NAD only</h1>
+        <p class="lede">BlueFx holds the trading balance in Namibian Dollars. DPO Pay by Network handles cards. Namibian banks handle the larger EFTs. This page is a sample of that flow.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="partner-hero" id="dpo">
+          <img src="/assets/dpo.png" alt="DPO Pay by Network">
+          <div>
+            <p class="eyebrow">Payment partner</p>
+            <h2>DPO Pay by Network</h2>
+            <p>DPO is the card and local-payment partner for Namibian clients on this demo. A successful payment is credited in NAD. There is no dollar wallet to convert afterwards.</p>
+            <a class="btn btn-primary" href="/dpo">Open the DPO page</a>
+          </div>
+        </div>
+
+        <h2 style="margin:36px 0 12px">Try a sample deposit</h2>
+        <form class="calc" id="fee-calc">
+          <label class="field"><span>Amount in NAD</span><input name="amount" type="number" min="0" step="50" value="1000"></label>
+          <label class="field"><span>Method</span>
+            <select name="channel">
+              <option value="dpo">DPO Pay</option>
+              <option value="bank">Namibian bank EFT</option>
+            </select>
+          </label>
+          <output id="fee-out"></output>
+        </form>
+
+        <h2 style="margin:8px 0 12px">Deposits</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Method</th><th>Minimum</th><th>Maximum</th><th>Sample fee</th><th>Time on this demo</th></tr></thead>
+            <tbody>
+              <tr><td>DPO Pay card<small>Visa and Mastercard</small></td><td>N$100</td><td>N$100,000</td><td>N$0</td><td>Instant</td></tr>
+              <tr><td>DPO Pay local methods<small>As offered by DPO in Namibia</small></td><td>N$100</td><td>N$20,000</td><td>N$0</td><td>Instant</td></tr>
+              <tr><td>Bank Windhoek EFT</td><td>N$250</td><td>N$500,000</td><td>N$0</td><td>Same business day</td></tr>
+              <tr><td>FNB Namibia</td><td>N$250</td><td>N$500,000</td><td>N$0</td><td>Same business day</td></tr>
+              <tr><td>Standard Bank Namibia</td><td>N$250</td><td>N$500,000</td><td>N$0</td><td>1 business day</td></tr>
+              <tr><td>Nedbank Namibia</td><td>N$250</td><td>N$500,000</td><td>N$0</td><td>1 business day</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style="margin:28px 0 12px">Withdrawals</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Method</th><th>Minimum</th><th>Sample fee</th><th>Time</th><th>Paid in</th></tr></thead>
+            <tbody>
+              <tr><td>Namibian bank EFT<small>Back to the account the deposit came from</small></td><td>N$200</td><td>N$0 for the first two each month, then N$35</td><td>1–2 business days</td><td>NAD</td></tr>
+              <tr><td>DPO return to card<small>Where the original payment allows it</small></td><td>N$100</td><td>N$0</td><td>1–3 business days</td><td>NAD</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">Withdrawals on a live desk would return to the same name that passed KYC. This demo does not move money.</p>
+
+        <div class="steps" style="margin-top:28px">
+          <article class="step"><em>01</em><h3>Match the name</h3><p>The bank account or card should match the profile. Windhoek compliance asks for a Namibian ID or passport and a proof of address.</p></article>
+          <article class="step"><em>02</em><h3>Send NAD</h3><p>Use the reference on the deposit screen. Payments without that reference wait in a suspense queue until the desk can see who they belong to.</p></article>
+          <article class="step"><em>03</em><h3>Trade or withdraw</h3><p>Bonus credit is not the same as cleared cash. The account card states the bonus. Cleared NAD can be withdrawn under the table above.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+</Base>

@@ -1,0 +1,80 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Free Forex Classes | BlueFx Markets" description="A free four-week forex class in Windhoek, taught in Namibian Dollars." page="classes">
+<main id="content">
+  <section class="page-hero">
+    <div class="container">
+      <p class="crumb"><a href="/">Home</a> / Tools / Free Forex Classes</p>
+      <h1>Free forex classes</h1>
+      <p class="lede">Four Tuesday evenings in Windhoek. The class is free, the room is at the BlueFx desk, and every balance in the workbook is NAD.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">January 2027</p>
+      <h2>Beginner class, Tuesday nights</h2>
+      <p class="sub">18:00–19:30 CAT at Unit 4, Maerua Mall Office Tower, Jan Jonker Road. Twelve seats. No textbook fee. You leave with notes, not with a funded account.</p>
+      <div class="module-grid" style="margin-top:22px">
+        <article class="module">
+          <em>Week 1 · 12 Jan</em>
+          <h3>A pip in Namibian Dollars</h3>
+          <p>What a quote is, why USD/NAD is the home pair, and how a one-pip move looks on a N$100 CashBack account.</p>
+        </article>
+        <article class="module">
+          <em>Week 2 · 19 Jan</em>
+          <h3>MT5 without the noise</h3>
+          <p>Market execution, spread, stop-out and the difference between the eleven BlueFx account types.</p>
+        </article>
+        <article class="module">
+          <em>Week 3 · 26 Jan</em>
+          <h3>Sessions and synthetics</h3>
+          <p>Why the Windhoek morning is quiet in cash FX, and what a synthetic index does while London is shut.</p>
+        </article>
+        <article class="module">
+          <em>Week 4 · 2 Feb</em>
+          <h3>Risk, then the phone</h3>
+          <p>Position size, the Premium leverage warning, and where the free signal robots stop — they do not place the trade.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0">
+    <div class="container two">
+      <div>
+        <p class="eyebrow">Enrol</p>
+        <h2>Join the free class</h2>
+        <p>This form is a demonstration. It does not enrol you with BlueFx and it does not store the address.</p>
+        <form class="panel" id="class-form">
+          <label class="field"><span>Name</span><input name="name" type="text" autocomplete="name" required></label>
+          <label class="field"><span>Town</span>
+            <select name="town">
+              <option>Windhoek</option>
+              <option>Walvis Bay</option>
+              <option>Swakopmund</option>
+              <option>Ondangwa</option>
+              <option>Other, Namibia</option>
+            </select>
+          </label>
+          <button class="btn btn-primary" type="submit">Enrol for free</button>
+          <output id="class-msg" style="display:block;font-weight:700;margin-top:12px"></output>
+        </form>
+      </div>
+      <div class="stat-stack">
+        <article><strong>Free</strong><span>No course fee and no minimum deposit to sit in the room</span></article>
+        <article><strong>4 weeks</strong><span>Tuesdays, 18:00–19:30 CAT, January into February 2027</span></article>
+        <article><strong>NAD</strong><span>Workbook figures stay in Namibian Dollars</span></article>
+      </div>
+    </div>
+  </section>
+  <script is:inline>
+    document.getElementById("class-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const name = form.name.value.trim();
+      document.getElementById("class-msg").textContent = name + " from " + form.town.value + " is listed on this demo only. Nothing was sent to BlueFx.";
+      form.reset();
+    });
+  </script>
+</main>
+</Base>

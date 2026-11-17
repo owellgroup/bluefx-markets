@@ -1,0 +1,26 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Economic Calendar | BlueFx Markets" description="Sample economic calendar in CAT for BlueFx Markets, including Namibia and the NAD peg." page="calendar">
+<main id="content">
+    <section class="page-hero">
+      <div class="container">
+        <p class="crumb"><a href="/">Home</a> / Tools / Economic Calendar</p>
+        <h1>Economic calendar</h1>
+        <p class="lede">A sample week for 17–20 November 2026. Times are CAT, which is Namibia’s clock. Local prints sit next to the offshore data that moves a NAD book, including South African CPI because of the rand peg.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="filters" id="cal-filters">
+          <button class="chip on" type="button" data-impact="all">All</button>
+          <button class="chip" type="button" data-impact="high">High</button>
+          <button class="chip" type="button" data-impact="medium">Medium</button>
+          <button class="chip" type="button" data-impact="low">Low</button>
+        </div>
+        <div id="calendar"></div>
+        <p class="note">Forecasts and previous prints are sample figures for the layout. They are not a data vendor’s calendar and they are not trade recommendations.</p>
+      </div>
+    </section>
+  </main>
+</Base>

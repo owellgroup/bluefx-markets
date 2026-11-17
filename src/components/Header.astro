@@ -1,0 +1,118 @@
+---
+import Socials from "./Socials.astro";
+
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+const groupOf = {
+  "/": "home",
+  "/synthetics": "synthetics",
+  "/accounts": "accounts",
+  "/deposits": "deposits",
+  "/dpo": "deposits",
+  "/about": "company",
+  "/legal": "company",
+  "/license": "company",
+  "/market-watch": "tools",
+  "/calendar": "tools",
+  "/signals": "tools",
+  "/seminars": "tools",
+  "/classes": "tools",
+  "/robots": "tools",
+  "/login": "login"
+};
+const exactOf = {
+  "/": "home",
+  "/synthetics": "synthetics",
+  "/accounts": "accounts",
+  "/deposits": "deposits",
+  "/about": "about",
+  "/legal": "legal",
+  "/license": "license",
+  "/market-watch": "market",
+  "/calendar": "calendar",
+  "/signals": "signals",
+  "/seminars": "seminars",
+  "/classes": "classes",
+  "/robots": "robots",
+  "/login": "login"
+};
+const group = groupOf[path] || "";
+const here = exactOf[path] || "";
+const on = (id) => (group === id || here === id ? "active" : undefined);
+const current = (id) => (here === id ? "page" : undefined);
+
+const ticks = [
+  "The first Namibian Best broker",
+  "BlueFx Markets — Windhoek’s home for NAD trading",
+  "Fund your account in Namibian Dollars with DPO Pay",
+  "Synthetic indices stay open 24/7 for Namibian traders",
+  "Support desk: support@bluefxmarkets.com",
+  "MT5 execution with spreads from 0 pips on Pro",
+  "Trade FX, gold, indices and commodities from Namibia",
+  "Download the BlueFx app for iPhone and Android",
+  "Every account on this desk is denominated in NAD",
+  "Free forex seminars and classes in Windhoek",
+  "Free Forex signal robots — sample alerts, no live orders",
+  "Bank of Namibia hours, Windhoek support, CAT clocks"
+];
+---
+<div class="topbar">
+  <div class="ticker-wrap">
+    <span class="ticker-label">Namibia</span>
+    <div class="ticker">
+      <div class="ticker-track">
+        <div class="ticker-group">
+          {ticks.map((item) => <span class="tick-item">{item}</span>)}
+        </div>
+        <div class="ticker-group" aria-hidden="true">
+          {ticks.map((item) => <span class="tick-item">{item}</span>)}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <a class="mail" href="mailto:support@bluefxmarkets.com">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5z"/></svg>
+      <span>support@bluefxmarkets.com</span>
+    </a>
+    <Socials />
+  </div>
+</div>
+<div class="sticky-head">
+  <nav class="nav" aria-label="Primary">
+    <a class="logo" href="/"><img src="/assets/logo.png" alt="BlueFx Markets"></a>
+    <button class="burger" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="/" class={on("home")} aria-current={current("home")}>Home</a></li>
+      <li><a href="/synthetics" class={on("synthetics")} aria-current={current("synthetics")}>Synthetics</a></li>
+      <li><a href="/accounts" class={on("accounts")} aria-current={current("accounts")}>Account Types</a></li>
+      <li><a href="/deposits" class={on("deposits")} aria-current={current("deposits")}>Deposits & Withdrawals</a></li>
+      <li class="has-sub">
+        <a href="/about" class={on("company")}>Company</a>
+        <button class="caret" type="button" aria-expanded="false" aria-label="Company pages"></button>
+        <ul class="sub">
+          <li><a href="/about" class={on("about")} aria-current={current("about")}>About Us</a></li>
+          <li><a href="/legal" class={on("legal")} aria-current={current("legal")}>Legal Documents</a></li>
+          <li><a href="/license" class={on("license")} aria-current={current("license")}>License</a></li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <a href="/market-watch" class={on("tools")}>Tools</a>
+        <button class="caret" type="button" aria-expanded="false" aria-label="Tool pages"></button>
+        <ul class="sub">
+          <li><a href="/market-watch" class={on("market")} aria-current={current("market")}>Market Watch</a></li>
+          <li><a href="/calendar" class={on("calendar")} aria-current={current("calendar")}>Economic Calendar</a></li>
+          <li><a href="/signals" class={on("signals")} aria-current={current("signals")}>Free Forex Signals Bots</a></li>
+          <li><a href="/seminars" class={on("seminars")} aria-current={current("seminars")}>Free Forex Seminars</a></li>
+          <li><a href="/classes" class={on("classes")} aria-current={current("classes")}>Free Forex Classes</a></li>
+          <li><a href="/robots" class={on("robots")} aria-current={current("robots")}>Free Forex Signal Robots</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a href="/login" class:list={["btn", "btn-nav", { active: here === "login" }]} aria-current={current("login")}>Login / Register</a>
+  </nav>
+  <div class="tape" aria-label="Live exchange symbols">
+    <div class="tape-live"><span class="live-dot"></span>LIVE</div>
+    <div class="tape-clock" id="cat-clock"></div>
+    <div class="tape-window"><div class="tape-track" id="tape-track"></div></div>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Free Forex Signal Robots | BlueFx Markets" description="Free sample forex signal robots from BlueFx Markets. Alerts only, no live orders." page="robots">
+<main id="content">
+  <section class="page-hero">
+    <div class="container">
+      <p class="crumb"><a href="/">Home</a> / Tools / Free Forex Signal Robots</p>
+      <h1>Free Forex signal robots</h1>
+      <p class="lede">Three robots you can switch on in this browser. They describe a sample alert. They do not attach to MT5 and they do not move a NAD balance.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="bot-grid" id="robot-grid">
+        <article class="bot">
+          <header><h3>Kunene Trend</h3><span class="pill">NAD crosses</span></header>
+          <p>Watches USD/NAD, EUR/NAD and GBP/NAD through the London morning, which is late morning in Windhoek. A sample alert names a direction and a distance. It is not an order.</p>
+          <dl>
+            <div><dt>Symbols</dt><dd>USD/NAD, EUR/NAD</dd></div>
+            <div><dt>Style</dt><dd>Trend</dd></div>
+            <div><dt>Session</dt><dd>08:00–12:00 CAT</dd></div>
+            <div><dt>Cost</dt><dd>Free</dd></div>
+          </dl>
+          <button class="btn btn-primary" type="button" data-robot="Kunene Trend">Enable on demo</button>
+        </article>
+        <article class="bot">
+          <header><h3>Etosha Gold</h3><span class="pill hot">Metals</span></header>
+          <p>Posts a sample note when gold moves against the Namibian Dollar. Useful next to the gold seminar. The robot does not sell or buy XAU/NAD for you.</p>
+          <dl>
+            <div><dt>Symbols</dt><dd>XAU/NAD, XAU/USD</dd></div>
+            <div><dt>Style</dt><dd>Swing</dd></div>
+            <div><dt>Session</dt><dd>London and New York</dd></div>
+            <div><dt>Cost</dt><dd>Free</dd></div>
+          </dl>
+          <button class="btn btn-primary" type="button" data-robot="Etosha Gold">Enable on demo</button>
+        </article>
+        <article class="bot">
+          <header><h3>Atlantic Range</h3><span class="pill">Majors</span></header>
+          <p>Looks for a quiet range on EUR/USD and GBP/USD, then writes a sample alert in NAD terms so the distance is easy to read from Windhoek.</p>
+          <dl>
+            <div><dt>Symbols</dt><dd>EUR/USD, GBP/USD</dd></div>
+            <div><dt>Style</dt><dd>Range</dd></div>
+            <div><dt>Session</dt><dd>14:00–18:00 CAT</dd></div>
+            <div><dt>Cost</dt><dd>Free</dd></div>
+          </dl>
+          <button class="btn btn-primary" type="button" data-robot="Atlantic Range">Enable on demo</button>
+        </article>
+      </div>
+      <p class="note" id="robot-note">Signals can be wrong. Enabling a robot here only changes this page. Compare them with the free signal bots if you want the running sample feed.</p>
+      <div class="cta-row" style="margin-top:16px">
+        <a class="btn btn-line" href="/signals">Free signal bots</a>
+        <a class="btn btn-line" href="/seminars">Free seminars</a>
+      </div>
+    </div>
+  </section>
+  <script is:inline>
+    document.getElementById("robot-grid").addEventListener("click", (event) => {
+      const button = event.target.closest("[data-robot]");
+      if (!button) return;
+      const on = button.dataset.on === "1";
+      button.dataset.on = on ? "0" : "1";
+      button.textContent = on ? "Enable on demo" : "Enabled on this demo";
+      document.getElementById("robot-note").textContent = on
+        ? "Signals can be wrong. Enabling a robot here only changes this page."
+        : button.dataset.robot + " is marked on in this browser. No alert was sent and no NAD balance changed.";
+    });
+  </script>
+</main>
+</Base>

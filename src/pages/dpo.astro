@@ -1,0 +1,48 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="DPO Pay | BlueFx Markets" description="DPO Pay by Network is the payment partner for BlueFx Markets Namibian Dollar deposits." page="dpo">
+<main id="content">
+    <section class="page-hero">
+      <div class="container">
+        <p class="crumb"><a href="/">Home</a> / <a href="/deposits">Deposits & Withdrawals</a> / DPO Pay</p>
+        <h1>DPO Pay, the Namibia payments partner</h1>
+        <p class="lede">DPO Pay by Network takes the card payment. BlueFx credits the Namibian Dollar amount on the trading account. One currency, from the payment screen to the MT5 balance.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="partner-hero">
+          <img src="/assets/dpo.png" alt="DPO Pay by Network">
+          <div>
+            <p class="eyebrow">By Network</p>
+            <h2>Why the desk uses DPO</h2>
+            <p>Namibian clients already know card payments. DPO is the partner named on this demo for Visa, Mastercard and the local methods DPO offers in Namibia. The BlueFx cashier does not ask you to pick USD, ZAR or KWD. The only currency on the cashier is NAD.</p>
+            <a class="btn btn-line" href="/deposits">Back to deposits & withdrawals</a>
+          </div>
+        </div>
+        <div class="steps" style="margin-top:22px">
+          <article class="step"><em>01</em><h3>Choose the account</h3><p>CashBack, Synthetics, VIP or any of the eleven. The minimum on the card still applies. DPO itself starts at N$100.</p></article>
+          <article class="step"><em>02</em><h3>Pay on the DPO page</h3><p>You would leave BlueFx for the DPO hosted page, pay, and return. This demo stops before any real payment page.</p></article>
+          <article class="step"><em>03</em><h3>See NAD on MT5</h3><p>A successful sample payment shows on the balance in Namibian Dollars. The iPhone and Android apps read the same figure.</p></article>
+        </div>
+        <h2 style="margin:32px 0 12px">Limits on this demo</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>DPO path</th><th>Minimum</th><th>Maximum</th><th>Fee</th><th>Currency</th></tr></thead>
+            <tbody>
+              <tr><td>Card</td><td>N$100</td><td>N$100,000</td><td>N$0</td><td>NAD</td></tr>
+              <tr><td>Local methods</td><td>N$100</td><td>N$20,000</td><td>N$0</td><td>NAD</td></tr>
+              <tr><td>Return to card</td><td>N$100</td><td>Up to the cleared cash balance</td><td>N$0</td><td>NAD</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="panel" style="margin-top:18px">
+          <h3>What DPO does not change</h3>
+          <p>A payment partner moves funds. It does not change spreads, leverage or stop-out. Those sit on the account you opened. VIP still starts at N$5,000 even though DPO can take N$100. Pro still starts at N$3,000. Bonus rules stay on the account card.</p>
+          <p>Questions about a sample payment go to the Windhoek desk at support@bluefxmarkets.com. The line is part of this demonstration and does not open a live cashier.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Base>

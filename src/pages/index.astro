@@ -1,0 +1,366 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="BlueFx Markets | The First Namibian Best Broker" description="BlueFx Markets is the Windhoek forex desk for Namibian Dollar accounts. MT5, synthetics, DPO Pay and live NAD pairs." page="home">
+<main id="content">
+    <section class="hero" aria-label="BlueFx highlights">
+      <div class="hero-track">
+      <article class="slide pos-right">
+        <div class="slide-media" style="background-image:url('/slide1.jpg')"></div>
+        <div class="slide-shade"></div>
+        <div class="slide-copy-wrap">
+          <div class="slide-copy">
+            <p class="kicker"><i></i> The first Namibian Best broker</p>
+            <h1>Trade from Windhoek with a broker built for Namibia</h1>
+            <p class="lede">Open an account in Namibian Dollars. MT5 pricing across FX, metals, indices and synthetics, with a local desk on support@bluefxmarkets.com.</p>
+            <div class="cta-row">
+              <a class="btn btn-red" href="/login">Open an Account</a>
+              <a class="btn btn-ghost" href="/accounts">See Account Types</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="slide align-right pos-mid">
+        <div class="slide-media" style="background-image:url('/slide2.jpg')"></div>
+        <div class="slide-shade"></div>
+        <div class="slide-copy-wrap">
+          <div class="slide-copy">
+            <p class="kicker"><i></i> iPhone and Android</p>
+            <h1>The markets travel with you</h1>
+            <p class="lede">Download BlueFx for iPhone and Android. Check a NAD balance, fund with DPO Pay and manage positions from Windhoek to the coast.</p>
+            <div class="cta-row">
+              <a class="btn btn-red" href="#app">Download the App</a>
+              <a class="btn btn-ghost" href="/dpo">Fund with DPO</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="slide align-right">
+        <div class="slide-media" style="background-image:url('/slide3.jpg')"></div>
+        <div class="slide-shade"></div>
+        <div class="slide-copy-wrap">
+          <div class="slide-copy">
+            <p class="kicker"><i></i> Live markets</p>
+            <h1>Charts, signals and a calendar on CAT</h1>
+            <p class="lede">Watch EUR/NAD, gold and indices move, then read the economic calendar and the free signal bots before the London open.</p>
+            <div class="cta-row">
+              <a class="btn btn-red" href="/market-watch">Open Market Watch</a>
+              <a class="btn btn-ghost" href="/signals">Free Signal Bots</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="container">
+        <div class="trust-row">
+          <div><strong>NAD</strong><span>Namibian Dollar accounts only</span></div>
+          <div><strong>MT5</strong><span>Market execution on every account</span></div>
+          <div><strong>N$100</strong><span>Lowest minimum deposit</span></div>
+          <div><strong>24/7</strong><span>Synthetic indices, all week</span></div>
+          <div><strong>DPO</strong><span>Payments by Network, in NAD</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:36px">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Windhoek</p>
+          <blockquote>The first Namibian Best broker.</blockquote>
+          <p class="sub">BlueFx Markets is built for traders who live on CAT time and think in NAD. The desk is in Windhoek. Support answers support@bluefxmarkets.com. Balances never sit in dollars, rands or dinars — the account currency is the Namibian Dollar.</p>
+          <ul class="points">
+            <li>Eleven MT5 accounts, from a N$100 CashBack ticket to a N$5,000 VIP relationship.</li>
+            <li>The Namibian Dollar is pegged to the rand, so published minimums move across one-for-one.</li>
+            <li>Deposits and withdrawals run through DPO Pay and Namibian banks, credited in NAD.</li>
+          </ul>
+        </div>
+        <div class="stat-stack">
+          <article><strong>11</strong><span>Account types, every one of them in NAD</span></article>
+          <article><strong>N$100</strong><span>Opens CashBack, Synthetics, Micro, Premium or Islamic</span></article>
+          <article><strong>1 : 1</strong><span>Namibian Dollar pegged to the South African rand</span></article>
+          <article><strong>CAT</strong><span>Windhoek support, Monday to Friday, 08:00–17:00</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:10px" id="markets">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Markets</p>
+            <h2>Live exchange symbols</h2>
+            <p class="sub">NAD pairs lead the board. Prices on this demo are simulated so the tape, the cards and the phone keep moving.</p>
+          </div>
+          <a class="btn btn-line" href="/market-watch">Open market watch</a>
+        </div>
+        <div class="quote-grid" id="quote-board"></div>
+        <p class="note">Bid, ask and the day’s change update on the page. They are not a bank or exchange feed.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:20px">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Accounts</p>
+            <h2>Accounts Namibians open first</h2>
+            <p class="sub">Six of the eleven MT5 accounts. Every figure is in NAD. Micro 300, Bonus 300, Zero Stop-Out and the drawdown bonus are on the full schedule.</p>
+          </div>
+          <a class="btn btn-line" href="/accounts">Compare all 11</a>
+        </div>
+        <div class="card-grid">
+          <article class="promo">
+            <span class="pill">Professional</span>
+            <h3>Pro Account</h3>
+            <p>Tighter spreads for experienced traders. No bonus. Stock CFDs carry a commission; FX, indices and metals do not.</p>
+            <p class="price-lg">N$3,000</p>
+            <ul class="mini-specs">
+              <li><span>Leverage</span><strong>Up to 1:100</strong></li>
+              <li><span>Spreads from</span><strong>0–2 pips</strong></li>
+              <li><span>Stop out</span><strong>30%</strong></li>
+              <li><span>Currency</span><strong>NAD</strong></li>
+            </ul>
+            <a class="btn btn-primary" href="/accounts#acc-pro">View Pro</a>
+          </article>
+          <article class="promo">
+            <span class="pill hot">Most opened</span>
+            <h3>CashBack Account</h3>
+            <p>From N$100 up to N$100,000. 10% of trading losses come back at midnight CAT, and the account includes a 100% bonus.</p>
+            <p class="price-lg">N$100</p>
+            <ul class="mini-specs">
+              <li><span>Leverage</span><strong>Up to 1:500</strong></li>
+              <li><span>Spreads from</span><strong>2 pips</strong></li>
+              <li><span>Bonus</span><strong>100%</strong></li>
+              <li><span>Currency</span><strong>NAD</strong></li>
+            </ul>
+            <a class="btn btn-primary" href="/accounts#acc-cashback">View CashBack</a>
+          </article>
+          <article class="promo">
+            <span class="pill">Relationship</span>
+            <h3>VIP</h3>
+            <p>Tight spreads and a named contact in Windhoek. Commission is N$54 per lot, converted for this NAD schedule.</p>
+            <p class="price-lg">N$5,000</p>
+            <ul class="mini-specs">
+              <li><span>Leverage</span><strong>Up to 1:500</strong></li>
+              <li><span>Spreads from</span><strong>0.5 pips</strong></li>
+              <li><span>Commission</span><strong>N$54 / lot</strong></li>
+              <li><span>Currency</span><strong>NAD</strong></li>
+            </ul>
+            <a class="btn btn-primary" href="/accounts#acc-vip">View VIP</a>
+          </article>
+        </div>
+        <div class="card-grid" style="margin-top:16px">
+          <article class="promo">
+            <span class="pill hot">24/7</span>
+            <h3>Synthetics 100% Bonus</h3>
+            <p>Always-on synthetic indices with a 100% bonus. Minimum trade size 0.002 and spreads from 0.5 pips.</p>
+            <p class="price-lg">N$100</p>
+            <ul class="mini-specs">
+              <li><span>Leverage</span><strong>Up to 1:100</strong></li>
+              <li><span>Bonus</span><strong>100%</strong></li>
+              <li><span>Swap</span><strong>Yes</strong></li>
+              <li><span>Currency</span><strong>NAD</strong></li>
+            </ul>
+            <a class="btn btn-primary" href="/synthetics">Explore synthetics</a>
+          </article>
+          <article class="promo">
+            <span class="pill">Swap-free</span>
+            <h3>Islamic</h3>
+            <p>No overnight swap, for traders who follow Islamic finance principles. CFDs from N$100, market execution.</p>
+            <p class="price-lg">N$100</p>
+            <ul class="mini-specs">
+              <li><span>Leverage</span><strong>Up to 1:500</strong></li>
+              <li><span>Spreads from</span><strong>1.5 pips</strong></li>
+              <li><span>Swap</span><strong>None</strong></li>
+              <li><span>Currency</span><strong>NAD</strong></li>
+            </ul>
+            <a class="btn btn-primary" href="/accounts#acc-islamic">View Islamic</a>
+          </article>
+          <article class="promo">
+            <span class="pill">High leverage</span>
+            <h3>Premium</h3>
+            <p>Up to 1:2000 leverage on a N$100 minimum. A larger position from a smaller NAD balance — and larger losses too.</p>
+            <p class="price-lg">N$100</p>
+            <ul class="mini-specs">
+              <li><span>Leverage</span><strong>Up to 1:2000</strong></li>
+              <li><span>Spreads from</span><strong>1 pip</strong></li>
+              <li><span>Bonus</span><strong>None</strong></li>
+              <li><span>Currency</span><strong>NAD</strong></li>
+            </ul>
+            <a class="btn btn-primary" href="/accounts#acc-premium">View Premium</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band">
+      <div class="container band-grid">
+        <div>
+          <p class="eyebrow">Synthetics</p>
+          <h2>Markets that do not wait for London</h2>
+          <p>Volatility, Boom, Crash and Step indices run 24 hours a day, seven days a week. That matters in Namibia, where the cash session in Johannesburg is not the only window that counts. Two accounts start at N$100: Synthetics, and Synthetics with a 100% bonus.</p>
+          <div class="cta-row">
+            <a class="btn btn-red" href="/synthetics">Explore synthetics</a>
+            <a class="btn btn-ghost" href="/accounts">Compare accounts</a>
+          </div>
+        </div>
+        <div class="hours">
+          <div><span>Windhoek desk</span><strong>08:00–17:00 CAT</strong></div>
+          <div><span>FX cash markets</span><strong>Sunday night to Friday</strong></div>
+          <div><span>Synthetic indices</span><strong>24/7</strong></div>
+          <div><span>Account currency</span><strong>NAD only</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="app">
+      <div class="container app-grid">
+        <div class="phone" aria-hidden="true">
+          <div class="phone-screen">
+            <div class="island"></div>
+            <div class="app-top">
+              <img src="/assets/logo-white.png" alt="">
+              <span>Demo</span>
+            </div>
+            <p class="app-label">Balance · NAD</p>
+            <p class="app-balance">N$24,580.00</p>
+            <p class="app-sub">Equity N$24,906.40 <strong class="up">+1.3%</strong></p>
+            <div class="app-chart" data-phone-chart></div>
+            <div class="app-row"><span>USD/NAD</span><strong data-phone="USD/NAD">18.2460</strong></div>
+            <div class="app-pos"><span>EUR/USD · Buy 0.10</span><b class="up">+N$186</b></div>
+            <div class="app-pos"><span>XAU/USD · Sell 0.02</span><b class="down">−N$42</b></div>
+            <div class="app-tabs"><span class="on">Trade</span><span>Charts</span><span>Funds</span></div>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">Mobile</p>
+          <h2>Download the app on iPhone and Android</h2>
+          <p class="sub">Take BlueFx from a Windhoek office to a departure board. The same NAD balance, the same MT5 tickets, deposits through DPO Pay.</p>
+          <div class="store-row">
+            <a class="store" href="#app" data-store="ios">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.9-3.5.9s-1.8-.8-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.3 2.9 2.3 1.1 0 1.6-.7 3-.7s1.8.7 3 .7 2-.1 2.9-2.3c.7-1 1.2-2 1.5-3.1-3.9-1.5-3.8-5.7-3.8-5.3zM14.8 6.6c.6-.8 1.1-1.9.9-3-1 .1-2.1.7-2.8 1.5-.6.7-1.2 1.8-.9 2.9 1.1.1 2.1-.5 2.8-1.4z"/></svg>
+              <span><small>Download on the</small><strong>App Store</strong></span>
+            </a>
+            <a class="store" href="#app" data-store="android">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34a853" d="M3.5 2.8v18.4l10.2-9.2z"/><path fill="#fbbc04" d="m13.7 12 2.6 2.4 4.4-2.5c.6-.4.6-1.4 0-1.8l-4.4-2.5z"/><path fill="#4285f4" d="M3.5 21.2 13.7 12l2.6 2.4z"/><path fill="#ea4335" d="M3.5 2.8 16.3 10 13.7 12z"/></svg>
+              <span><small>GET IT ON</small><strong>Google Play</strong></span>
+            </a>
+          </div>
+          <ul class="ticks">
+            <li>iPhone and Android, with the NAD balance on the first screen.</li>
+            <li>Fund the wallet with DPO Pay without leaving the app.</li>
+            <li>Alerts from the free signal bots, timed to CAT.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:10px">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Start</p>
+            <h2>Open, fund, trade</h2>
+          </div>
+        </div>
+        <div class="steps">
+          <article class="step"><em>01</em><h3>Create the profile</h3><p>Register on the demo desk. Town defaults to Windhoek and the currency field is locked to NAD.</p></article>
+          <article class="step"><em>02</em><h3>Fund in Namibian Dollars</h3><p>DPO Pay from N$100, or an EFT from Bank Windhoek, FNB Namibia, Standard Bank or Nedbank from N$250.</p></article>
+          <article class="step"><em>03</em><h3>Trade on MT5</h3><p>Desktop, the iPhone app or Android. Same account, same stop-out, same Windhoek support line.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:10px">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Tools</p>
+            <h2>What the desk watches</h2>
+          </div>
+        </div>
+        <div class="tool-grid">
+          <article class="tool">
+            <div class="icon-blob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5M4 19h16"/><path d="m7 14 3-4 3 2 4-6"/></svg></div>
+            <h3>Market Watch</h3>
+            <p>Live simulated bids on NAD crosses, majors, gold, indices, oil and the synthetic board.</p>
+            <a class="btn btn-line" href="/market-watch">Open the board</a>
+          </article>
+          <article class="tool">
+            <div class="icon-blob red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg></div>
+            <h3>Economic Calendar</h3>
+            <p>Namibia CPI, the Bank of Namibia rate and the offshore prints that move a NAD book. Times in CAT.</p>
+            <a class="btn btn-line" href="/calendar">See the week</a>
+          </article>
+          <article class="tool">
+            <div class="icon-blob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4"/></svg></div>
+            <h3>Free Forex Signal Bots</h3>
+            <p>Atlantic Trend, Namib Gold, Desert Range and the Dollar-NAD desk. Sample signals, no live orders.</p>
+            <a class="btn btn-line" href="/signals">View the bots</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:10px">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Free in Namibia</p>
+            <h2>Seminars, classes and signal robots</h2>
+          </div>
+        </div>
+        <div class="learn-grid">
+          <article class="learn-card">
+            <span class="pill">Free</span>
+            <h3>Forex seminars</h3>
+            <p>Evening sessions in Windhoek and Walvis Bay, plus one online hour. Charts, NAD pairs and risk, with no course fee.</p>
+            <a class="btn btn-ghost" href="/seminars">See the dates</a>
+          </article>
+          <article class="learn-card">
+            <span class="pill">Free</span>
+            <h3>Forex classes</h3>
+            <p>A four-week beginner class on Tuesday evenings in Windhoek. Every example is priced in Namibian Dollars.</p>
+            <a class="btn btn-ghost" href="/classes">View the class</a>
+          </article>
+          <article class="learn-card">
+            <span class="pill">Free</span>
+            <h3>Forex signal robots</h3>
+            <p>Kunene, Etosha and Atlantic robots post sample alerts. They do not send an order to MT5.</p>
+            <a class="btn btn-ghost" href="/robots">Meet the robots</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:8px">
+      <div class="container dpo-band">
+        <img src="/assets/dpo.png" alt="DPO Pay by Network">
+        <div>
+          <p class="eyebrow">Payment partner</p>
+          <h2>Fund the account in NAD with DPO Pay</h2>
+          <p class="sub">DPO Pay by Network is the payments partner on this demo. Cards and local payments for Namibian clients, credited in Namibian Dollars.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/dpo">DPO Pay page</a>
+            <a class="btn btn-line" href="/deposits">Deposits & withdrawals</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band">
+      <div class="container">
+        <p class="eyebrow">Namibia</p>
+        <h2>Ready when Windhoek is.</h2>
+        <p>Open a demo profile, compare the eleven NAD accounts, or read the sample licence before you go further.</p>
+        <div class="cta-row">
+          <a class="btn btn-red" href="/login">Login / Register</a>
+          <a class="btn btn-ghost" href="/license">Read the licence</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Base>

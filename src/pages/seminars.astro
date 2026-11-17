@@ -1,0 +1,85 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Free Forex Seminars | BlueFx Markets" description="Free forex seminars in Windhoek, Walvis Bay and online from the BlueFx Markets desk." page="seminars">
+<main id="content">
+  <section class="page-hero">
+    <div class="container">
+      <p class="crumb"><a href="/">Home</a> / Tools / Free Forex Seminars</p>
+      <h1>Free forex seminars</h1>
+      <p class="lede">Short sessions for Namibian traders. No fee, no deposit required, and nothing on the calendar is a live trading recommendation.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container two">
+      <div>
+        <p class="eyebrow">This season</p>
+        <h2>Three seats, all free</h2>
+        <p>The desk hosts the seminars at Maerua Mall Office Tower in Windhoek, one Saturday in Walvis Bay, and one hour online. Times are Central Africa Time. Bring a notebook. The examples use NAD pairs, gold and a synthetic index.</p>
+        <div class="event-list" style="margin-top:18px">
+          <article class="event">
+            <time datetime="2026-11-27T18:00">Thu 27 Nov<br>18:00 CAT</time>
+            <div>
+              <strong>Reading a NAD chart</strong>
+              <p>Unit 4, Maerua Mall Office Tower, Windhoek. EUR/NAD, USD/NAD and what a pip is worth in Namibian Dollars.</p>
+            </div>
+          </article>
+          <article class="event">
+            <time datetime="2026-12-06T09:30">Sat 6 Dec<br>09:30 CAT</time>
+            <div>
+              <strong>Gold and the Namibian Dollar</strong>
+              <p>Walvis Bay waterfront meeting room. XAU/NAD, session times, and why a gold move is not the same as a rand move.</p>
+            </div>
+          </article>
+          <article class="event">
+            <time datetime="2026-12-16T18:00">Tue 16 Dec<br>18:00 CAT</time>
+            <div>
+              <strong>Risk before the first lot</strong>
+              <p>Online. Stop-outs, the 1:2000 warning on Premium, and how a free seminar is not a signal to trade.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">Reserve</p>
+        <h2>Hold a demo seat</h2>
+        <p>The form stays in this browser. BlueFx does not receive the name or the email.</p>
+        <form class="panel" id="seat-form">
+          <label class="field"><span>Name</span><input name="name" type="text" autocomplete="name" required></label>
+          <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email" required></label>
+          <label class="field"><span>Seminar</span>
+            <select name="seminar">
+              <option>27 Nov — Reading a NAD chart, Windhoek</option>
+              <option>6 Dec — Gold and the Namibian Dollar, Walvis Bay</option>
+              <option>16 Dec — Risk before the first lot, online</option>
+            </select>
+          </label>
+          <button class="btn btn-red" type="submit">Reserve a free seat</button>
+          <output id="seat-msg" style="display:block;font-weight:700;margin-top:12px"></output>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="section band">
+    <div class="container">
+      <p class="eyebrow">Also free</p>
+      <h2>Classes and signal robots sit beside the seminars.</h2>
+      <p>The Tuesday class is four weeks. The robots only post sample alerts.</p>
+      <div class="cta-row">
+        <a class="btn btn-red" href="/classes">Free forex classes</a>
+        <a class="btn btn-ghost" href="/robots">Free signal robots</a>
+      </div>
+    </div>
+  </section>
+  <script is:inline>
+    document.getElementById("seat-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const name = form.name.value.trim();
+      const out = document.getElementById("seat-msg");
+      out.textContent = name + ", the seat is noted on this demo only. Nothing was sent to BlueFx.";
+      form.reset();
+    });
+  </script>
+</main>
+</Base>

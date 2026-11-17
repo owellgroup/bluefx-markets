@@ -1,0 +1,34 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Account Types | BlueFx Markets" description="Eleven BlueFx Markets MT5 accounts, all denominated in Namibian Dollars." page="accounts">
+<main id="content">
+    <section class="page-hero">
+      <div class="container">
+        <p class="crumb"><a href="/">Home</a> / Account Types</p>
+        <h1>Account types priced in NAD</h1>
+        <p class="lede">Eleven MetaTrader 5 accounts for Namibian traders. Minimums follow the original rand amounts one-for-one, because the Namibian Dollar is pegged to the rand. The account currency is NAD only.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="filters" id="account-filters">
+          <button class="chip on" type="button" data-filter="all">All accounts</button>
+          <button class="chip" type="button" data-filter="bonus">Bonus</button>
+          <button class="chip" type="button" data-filter="synthetic">Synthetics</button>
+          <button class="chip" type="button" data-filter="swapfree">Swap-free</button>
+          <button class="chip" type="button" data-filter="tight">Tighter spreads</button>
+          <button class="chip" type="button" data-filter="leverage">High leverage</button>
+        </div>
+        <p id="account-count" class="note"></p>
+        <div class="account-grid" id="account-grid"></div>
+        <div class="panel" style="margin-top:18px">
+          <h3>How the NAD figures were set</h3>
+          <p>Minimum deposits match the source schedule on a one-to-one basis with the Namibian Dollar. A published R100 minimum is shown as N$100. A published R3,000 minimum is N$3,000. VIP commission was quoted as 3 US dollars per lot and is shown here as N$54 per lot, using N$18 to the US dollar for this demo.</p>
+          <p>Premium leverage up to 1:2000 magnifies losses as well as gains and can use up a NAD balance quickly. The asterisk on that account is a warning. Bonus credit on this demo is a product description, not cash you can withdraw until a live agreement says so.</p>
+          <p>CashBack pays the described 10% of trading losses back at midnight CAT, and the account’s bonus field is 100%. Both are listed on the card.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Base>

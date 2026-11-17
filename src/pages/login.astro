@@ -1,0 +1,68 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Login / Register | BlueFx Markets" description="Demo login and registration for BlueFx Markets. Account currency is NAD." page="login">
+<main id="content">
+    <section class="auth">
+      <div class="auth-brand">
+        <img src="/assets/logo-white.png" alt="BlueFx Markets">
+        <p class="eyebrow" style="color:#ffd0d6">Windhoek</p>
+        <h1>The first Namibian Best broker.</h1>
+        <p>Open the demo profile in Namibian Dollars. The desk is on Jan Jonker Road. Support is support@bluefxmarkets.com.</p>
+        <ul class="ticks">
+          <li>Currency locked to NAD.</li>
+          <li>Eleven MT5 account types.</li>
+          <li>DPO Pay and Namibian banks on the cashier.</li>
+        </ul>
+      </div>
+      <div class="auth-panel">
+        <div class="tabs">
+          <button type="button" class="on" data-tab="login">Login</button>
+          <button type="button" data-tab="register">Register</button>
+        </div>
+        <form id="form-login">
+          <label class="field"><span>Email</span><input name="email" type="email" autocomplete="username" placeholder="you@email.com" required></label>
+          <label class="field"><span>Password</span><input name="password" type="password" autocomplete="current-password" placeholder="At least 8 characters" required></label>
+          <p class="form-error"></p>
+          <button class="btn btn-red" type="submit">Login</button>
+        </form>
+        <form id="form-register" hidden>
+          <div class="grid-2">
+            <label class="field"><span>First name</span><input name="first" autocomplete="given-name" required></label>
+            <label class="field"><span>Last name</span><input name="last" autocomplete="family-name" required></label>
+          </div>
+          <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email" required></label>
+          <label class="field"><span>Mobile</span><input name="phone" type="tel" placeholder="+264 81 000 0000"></label>
+          <div class="grid-2">
+            <label class="field"><span>Town</span>
+              <select name="town">
+                <option>Windhoek</option>
+                <option>Walvis Bay</option>
+                <option>Swakopmund</option>
+                <option>Ondangwa</option>
+                <option>Oshakati</option>
+                <option>Rundu</option>
+                <option>Katima Mulilo</option>
+                <option>Other, Namibia</option>
+              </select>
+            </label>
+            <label class="field"><span>Account type</span><select name="type" id="account-type"></select></label>
+          </div>
+          <label class="field"><span>Account currency</span><input value="NAD — Namibian Dollar" readonly></label>
+          <label class="field"><span>Password</span><input name="password" type="password" autocomplete="new-password" placeholder="At least 8 characters" required></label>
+          <label class="check"><input name="agree" type="checkbox"> <span>I understand this is a BlueFx Markets demonstration and that no live account is opened.</span></label>
+          <p class="form-error"></p>
+          <button class="btn btn-primary" type="submit">Create demo profile</button>
+        </form>
+        <div class="success" id="auth-success" hidden>
+          <h2>Welcome</h2>
+          <p></p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/accounts">View account types</a>
+            <a class="btn btn-line" href="/deposits">Deposits in NAD</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Base>

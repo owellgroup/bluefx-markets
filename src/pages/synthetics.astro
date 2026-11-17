@@ -1,0 +1,69 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Synthetic Indices | BlueFx Markets" description="24/7 synthetic indices at BlueFx Markets, traded from a Namibian Dollar account." page="synthetics">
+<main id="content">
+    <section class="page-hero">
+      <div class="container">
+        <p class="crumb"><a href="/">Home</a> / Synthetics</p>
+        <h1>Synthetic indices, open while Windhoek sleeps</h1>
+        <p class="lede">Derived markets with their own pricing, not a listing on the Namibian Stock Exchange. They run 24 hours a day, seven days a week, from a NAD account on MT5.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container two">
+        <div>
+          <p class="eyebrow">Why Namibia uses them</p>
+          <h2>A session that does not follow London</h2>
+          <p>Cash FX is quiet in the Windhoek morning, before Europe prints the first ticket. Synthetic indices keep a price anyway. Volatility indices trend and spike on their own clock. Boom indices grind higher and jump. Crash indices do the opposite. Step Index walks in fixed steps. None of them need the Johannesburg cash open.</p>
+          <p>BlueFx offers two ways in, both from N$100, both in NAD, both with market execution. One pays a 100% bonus. The other does not, and keeps the same 0.002 minimum and spreads from 0.5 pips.</p>
+          <ul class="points">
+            <li>Platform is MT5. Swap applies. Stop-out 30%. Margin call 50%.</li>
+            <li>Leverage up to 1:100. No commission on these two accounts.</li>
+            <li>The 100% Drawdown Bonus account excludes synthetics. Use the cards below instead.</li>
+          </ul>
+        </div>
+        <div class="hours" style="color:var(--ink)">
+          <div style="background:white;border:1px solid var(--line)"><span>Volatility 10, 25, 50, 75, 100</span><strong>24/7</strong></div>
+          <div style="background:white;border:1px solid var(--line)"><span>Boom 300, 500, 1000</span><strong>24/7</strong></div>
+          <div style="background:white;border:1px solid var(--line)"><span>Crash 300, 500, 1000</span><strong>24/7</strong></div>
+          <div style="background:white;border:1px solid var(--line)"><span>Step Index and Range Break</span><strong>24/7</strong></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Sample board</p>
+            <h2>What a synthetic ticket looks like</h2>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Index</th><th>Character</th><th>Typical use</th><th>Hours</th><th>Account</th></tr></thead>
+            <tbody>
+              <tr><td>Volatility 75</td><td>Fast, wide ranges</td><td>Short holds on the Desert Range bot</td><td>24/7</td><td>Either synthetics account</td></tr>
+              <tr><td>Volatility 25</td><td>Calmer than 75</td><td>First week on a N$100 deposit</td><td>24/7</td><td>Either synthetics account</td></tr>
+              <tr><td>Boom 500</td><td>Upward drift, sudden spikes</td><td>Trend with a defined stop</td><td>24/7</td><td>Either synthetics account</td></tr>
+              <tr><td>Crash 1000</td><td>Downward drift, sudden drops</td><td>Mirror of Boom, rarer spikes</td><td>24/7</td><td>Either synthetics account</td></tr>
+              <tr><td>Step Index</td><td>Fixed steps up or down</td><td>Range and break ideas</td><td>24/7</td><td>Either synthetics account</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">Prices for Volatility 75, Boom 500, Crash 1000 and Step Index also move on the market watch. They are simulated.</p>
+      </div>
+    </section>
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Accounts</p>
+            <h2>Both start at N$100</h2>
+          </div>
+        </div>
+        <div class="account-grid" id="syn-accounts"></div>
+      </div>
+    </section>
+  </main>
+</Base>

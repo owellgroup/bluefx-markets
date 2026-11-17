@@ -1,0 +1,39 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Market Watch | BlueFx Markets" description="Simulated live market watch for NAD pairs, FX, gold, indices and synthetics." page="market">
+<main id="content">
+    <section class="page-hero">
+      <div class="container">
+        <p class="crumb"><a href="/">Home</a> / Tools / Market Watch</p>
+        <h1>Market watch</h1>
+        <p class="lede">NAD crosses sit at the top, then the majors, gold in dollars and in Namibian Dollars, indices, oil and the synthetic board. Prices move so you can see the layout. They are simulated.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="toolbar">
+          <input class="search" id="watch-search" type="search" placeholder="Search EUR, gold, NAD, Boom…">
+          <div class="filters" id="watch-filters" style="margin:0">
+            <button class="chip on" type="button" data-filter="all">All</button>
+            <button class="chip" type="button" data-filter="nad">NAD</button>
+            <button class="chip" type="button" data-filter="fx">Forex</button>
+            <button class="chip" type="button" data-filter="metals">Metals</button>
+            <button class="chip" type="button" data-filter="indices">Indices</button>
+            <button class="chip" type="button" data-filter="energy">Energy</button>
+            <button class="chip" type="button" data-filter="synthetic">Synthetics</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Symbol</th><th>Bid</th><th>Ask</th><th>Spread</th><th>Change</th><th>High</th><th>Low</th></tr>
+            </thead>
+            <tbody id="watch-body"></tbody>
+          </table>
+        </div>
+        <p class="note">Spread is shown in pips or points for the symbol. ZAR/NAD hovers near parity because the Namibian Dollar is pegged to the rand. Account balances on BlueFx are still NAD only.</p>
+      </div>
+    </section>
+  </main>
+</Base>
